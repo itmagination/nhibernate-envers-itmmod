@@ -1,0 +1,61 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{34BA8295-3EBE-47B0-ABBF-0A7E9A8E6B35}"
+	ProjectSection(SolutionItems) = preProject
+		Build\build.bat = Build\build.bat
+		Build\buildDoc.bat = Build\buildDoc.bat
+		Build\buildRelease.bat = Build\buildRelease.bat
+		Build\default.msbuild = Build\default.msbuild
+		Build\NHibernate.Envers.nuspec = Build\NHibernate.Envers.nuspec
+		ReleaseNotes.txt = ReleaseNotes.txt
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NHibernate.Envers", "NHibernate.Envers\NHibernate.Envers.csproj", "{16492F52-0C2E-4847-9CBF-696907808FD6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NHibernate.Envers.Tests", "NHibernate.Envers.Tests\NHibernate.Envers.Tests.csproj", "{D03CBC3B-37CF-4C06-BACE-3B2674399BEE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Doc", "Doc", "{C9C74EFE-506E-41A8-8359-88AB303E60DA}"
+	ProjectSection(SolutionItems) = preProject
+		doc\Reference\modules\configuration.xml = doc\Reference\modules\configuration.xml
+		doc\Reference\modules\example.xml = doc\Reference\modules\example.xml
+		doc\Reference\modules\exceptions.xml = doc\Reference\modules\exceptions.xml
+		doc\Reference\modules\links.xml = doc\Reference\modules\links.xml
+		doc\Reference\master.xml = doc\Reference\master.xml
+		doc\Reference\modules\preface.xml = doc\Reference\modules\preface.xml
+		doc\Reference\modules\queries.xml = doc\Reference\modules\queries.xml
+		doc\Reference\modules\quickstart.xml = doc\Reference\modules\quickstart.xml
+		doc\Reference\modules\revisionlog.xml = doc\Reference\modules\revisionlog.xml
+		doc\Reference\modules\schema.xml = doc\Reference\modules\schema.xml
+		doc\Reference\modules\source.xml = doc\Reference\modules\source.xml
+		doc\Reference\modules\tables.xml = doc\Reference\modules\tables.xml
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{D559C7CB-1E6C-4CD2-9E3F-BF95E173AB78}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\NuGet.exe = .nuget\NuGet.exe
+		.nuget\NuGet.targets = .nuget\NuGet.targets
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{16492F52-0C2E-4847-9CBF-696907808FD6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{16492F52-0C2E-4847-9CBF-696907808FD6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{16492F52-0C2E-4847-9CBF-696907808FD6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{16492F52-0C2E-4847-9CBF-696907808FD6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D03CBC3B-37CF-4C06-BACE-3B2674399BEE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D03CBC3B-37CF-4C06-BACE-3B2674399BEE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D03CBC3B-37CF-4C06-BACE-3B2674399BEE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D03CBC3B-37CF-4C06-BACE-3B2674399BEE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{C9C74EFE-506E-41A8-8359-88AB303E60DA} = {34BA8295-3EBE-47B0-ABBF-0A7E9A8E6B35}
+	EndGlobalSection
+EndGlobal

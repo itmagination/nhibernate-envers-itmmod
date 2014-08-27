@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+						 assembly="NHibernate.Envers.Tests"
+						 namespace="NHibernate.Envers.Tests.Entities.Ids">
+	<class name="EmbIdTestEntity">
+		<composite-id name="Id">
+			<key-property name="X"/>
+			<key-property name="Y"/>
+		</composite-id>
+		<property name="Str1"/>
+	</class>
+
+	<class name="EmbIdWithCustomTypeTestEntity" table="EIWCTTE">
+		<composite-id name="Id">
+			<key-property name="X"/>
+			<key-property name="CustomEnum" type="NHibernate.Envers.Tests.Entities.Ids.CustomEnumUserType, NHibernate.Envers.Tests"/>
+		</composite-id>
+		<property name="Str1"/>
+	</class>
+
+	<class name="CompositeDateIdTestEntity" table="CDITE">
+		<composite-id name="Id">
+			<key-property name="X"/>
+			<key-property name="Y"/>
+		</composite-id>
+		<property name="Str1"/>
+	</class>
+
+	<class name="DateIdTestEntity" table="DITE">
+		<id name="Id">
+			<generator class="assigned"/>
+		</id>
+		<property name="Str1"/>
+	</class>
+
+	<class name="UnusualIdNamingEntity">
+		<id name="UniqueField">
+			<generator class="assigned" />
+		</id>
+		<property name="VariousData" />
+	</class>
+</hibernate-mapping>

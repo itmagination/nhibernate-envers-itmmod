@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+						 assembly="NHibernate.Envers.Tests"
+						 namespace="NHibernate.Envers.Tests.Entities.CustomType">
+	<typedef class="NHibernate.Envers.Tests.Entities.CustomType.CompositeTestUserType, NHibernate.Envers.Tests" name="Comp" />
+	<typedef class="NHibernate.Envers.Tests.Entities.CustomType.ParametrizedTestUserType, NHibernate.Envers.Tests" name="Param">
+		<param name="param1">x</param>
+		<param name="param2">y</param>
+	</typedef>
+	<typedef name="Prim" class="NHibernate.Envers.Tests.Entities.CustomType.PrimitiveTestUserType, NHibernate.Envers.Tests"/>
+
+	<class name="CompositeCustomTypeEntity" table="ComCusTypEnt">
+		<id name="Id">
+			<generator class="native"/>
+		</id>
+		<property name="Component" type="Comp">
+			<column name="CompA"/>
+			<column name="CompB"/>
+		</property>
+	</class>
+
+	<class name="ParametrizedCustomTypeEntity" table="ParCusTypEnt">
+		<id name="Id">
+			<generator class="native"/>
+		</id>
+		<property name="Str" type="Param"/>
+	</class>
+
+	<class name="PrimitiveCustomTypeEntity" table="PriCusTypEnt">
+		<id name="Id">
+			<generator class="native"/>
+		</id>
+		<property name="PrimitiveType" type="Prim">
+			<column name="PrimVal"/>
+		</property>
+	</class>
+</hibernate-mapping>

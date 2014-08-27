@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2"
+									assembly="NHibernate.Envers.Tests"
+									default-access="field"
+									namespace="NHibernate.Envers.Tests.Entities.RevEntity">
+	<class name="CustomRevEntityField">
+		<id name="_customId" column="cID">
+			<generator class="native">
+				<param name="sequence">cre_sequence</param>
+			</generator>
+		</id>
+		<property name="_customTimestamp" column="cts"/>
+	</class>
+</hibernate-mapping>

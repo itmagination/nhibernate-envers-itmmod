@@ -1,0 +1,52 @@
+<?xml version='1.0' encoding="UTF-8"?>
+<chapter id="exceptions">
+    <title>Mapping exceptions</title>
+
+    <section id="exceptions-wontbesupported">
+
+        <title>What is not and will (probably) not be supported</title>
+
+        <para>
+            Bags (the corresponding CLR type is IList&lt;T&gt;) with duplicate elements.
+            The reason is that persisting, for example a bag of string-s, violates a principle
+            of relational databases: that each table is a set of tuples. In case of bags,
+            however (which require a join table), if there is a duplicate element, the two
+            tuples corresponding to the elements will be the same. NHibernate allows this,
+            however Envers (or more precisely: the database connector) will throw an exception
+            when trying to persist two identical elements, because of a unique constraint violation.
+        </para>
+
+        <para>
+            There are at least two ways out if you need bag semantics:
+        </para>
+
+        <orderedlist>
+            <listitem>
+                <para>
+                    Use an indexed collection, or
+                </para>
+            </listitem>
+            <listitem>
+                <para>
+                    Provide a unique id for your elements.
+                </para>
+            </listitem>
+        </orderedlist>
+
+    </section>
+
+    <section id="exceptions-willbesupported">
+
+        <title>What is not but <emphasis>will</emphasis> be supported</title>
+
+        <orderedlist>
+			  <listitem>
+				  <para>
+					  ManyToAny reference
+				  </para>
+			  </listitem>
+        </orderedlist>
+
+    </section>
+
+</chapter>
